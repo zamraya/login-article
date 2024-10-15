@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('/images/home.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            backdrop-filter: blur(8px);
+        }
+        .signup-box {
+            width: 300px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+        }
+        .signup-box h2 {
+            margin: 0 0 30px;
+            text-align: center;
+        }
+        .signup-box input[type="text"], .signup-box input[type="password"], .signup-box input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            background: lightgray;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .signup-box input[type="submit"] {
+            background: lightgray;
+            color: black;
+            cursor: pointer;
+        }
+        .signup-box input[type="submit"]:hover {
+            background: lightgray;
+        }
+        .login-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .login-link a {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-box">
+        <h2>Sign up</h2>
+        <form id="signupForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Sign up">
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="login.html">Log in</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'login.html'; 
+        });
+    </script>
+</body>
+</html>

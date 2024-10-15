@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Log in</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: url('/images/background1.jpg') no-repeat center center fixed;
+            background: url('/images/home.jpg') no-repeat center center fixed;
             background-size: cover;
             display: flex;
             align-items: center;
@@ -27,7 +27,10 @@
             margin: 0 0 30px;
             text-align: center;
         }
-        .login-box input[type="text"], .login-box input[type="password"], .login-box input[type="submit"] {
+        .login-box input[type="text"], 
+        .login-box input[type="password"], 
+        .login-box input[type="submit"],
+        .login-box button {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -36,13 +39,14 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
-        .login-box input[type="submit"] {
-            background: lightgray;
+        .login-box input[type="submit"],
+        .login-box button {
             color: black;
             cursor: pointer;
         }
-        .login-box input[type="submit"]:hover {
-            background: lightgray;
+        .login-box input[type="submit"]:hover,
+        .login-box button:hover {
+            background: #d0d0d0;
         }
         .signup-link {
             text-align: center;
@@ -61,6 +65,7 @@
             <input type="text" id="username" placeholder="Username" required>
             <input type="password" id="password" placeholder="Password" required>
             <input type="submit" value="Log in">
+            <button type="button" onclick="goBack()">Back</button>
         </form>
         <div class="signup-link">
             Don't have an account? <a href="signup.html">Sign Up</a>
@@ -72,6 +77,10 @@
             e.preventDefault();
             window.location.href = 'index.html'; 
         });
+
+        function goBack() {
+            window.location.href = 'index.html';
+        }
     </script>
 </body>
 </html>
